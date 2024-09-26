@@ -11,7 +11,7 @@ const db = mysql.createConnection({
   port: process.env.DB_PORT,
   ssl: {
     rejectUnauthorized: true, 
-    ca: fs.readFileSync(path.join(__dirname, 'config', 'aiven-ca-cert.pem'), 'utf8'),
+    ca: fs.readFileSync(path.join(__dirname, 'aiven-ca-cert.pem'), 'utf8'),
   },
 });
 
