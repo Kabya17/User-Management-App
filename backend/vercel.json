@@ -12,7 +12,7 @@
         "dest": "server.js"
       },
       {
-        "src": "/", // Handles the root route
+        "src": "/",
         "dest": "server.js"
       }
     ]
