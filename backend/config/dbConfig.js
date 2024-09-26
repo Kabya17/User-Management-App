@@ -1,5 +1,6 @@
 const mysql = require('mysql2');
 const fs = require('fs'); 
+const path = require('path');
 require('dotenv').config();
 
 const db = mysql.createConnection({
@@ -10,7 +11,7 @@ const db = mysql.createConnection({
   port: process.env.DB_PORT,
   ssl: {
     rejectUnauthorized: true, 
-    ca: fs.readFileSync('../aiven-ca-cert.pem'),
+    ca: fs.readFileSync(path.join(__dirname, 'config', 'aiven-ca-cert.pem'), 'utf8'),
   },
 });
 
