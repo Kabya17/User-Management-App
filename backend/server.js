@@ -6,8 +6,8 @@ const app = express();
 
 app.use(cors({
   origin: 'https://user-management-app-frontend.vercel.app', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization','X-Requested-With', 'Accept'],
   credentials: true, 
 }));
 
