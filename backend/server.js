@@ -11,7 +11,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use('/api', userRoutes);
+app.use('/', userRoutes);
 app.get('/', (req, res) => {
   res.send('Welcome to the User Management API! Use /api/register, /api/login, etc. to interact with the API.');
 });
